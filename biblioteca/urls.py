@@ -21,5 +21,7 @@ from libros import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home, name='home'),
-    url(r'^listaDeLibros/$', views.lista_libros, name='lista_libros')
+    url(r'^agregar_libro/$', views.agregar_libro, name='agregar_libro'),
+    url(r'^listaDeLibros/$', views.lista_libros, name='lista_libros'),
+    url(r'^actializar/(?P<pk>\d+)/editar/$', views.actualizar, name='actualizar'),
 ]
